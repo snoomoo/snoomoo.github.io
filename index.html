@@ -418,35 +418,16 @@ var $=function(id) { return document.getElementById(id); };
 
 var search=[ // Search engines
     ["",    "https://www.google.com/#q="],                               // Google (Default)
-    ["!a",  "https://www.google.com/#q="],                              // Google
-    ["!b",  "https://www.google.com/#q="],                              // Google
-    ["!c",  "https://www.google.com/#q="],                              // Google
-    ["!d",  "https://www.google.com/#q="],                              // Google
-    ["!e",  "https://www.google.com/#q="],                              // Google
-    ["!f",  "https://www.google.com/#q="],                              // Google
-    ["!g",  "https://www.google.com/#q="],                              // Google
-    ["!h",  "https://www.google.com/#q="],                              // Google
-    ["!i",  "https://www.google.com/#q="],                              // Google
-    ["!j",  "https://www.google.com/#q="],                              // Google
-    ["!k",  "https://www.google.com/#q="],                              // Google
-    ["!l",  "https://www.google.com/#q="],                              // Google
-    ["!m",  "https://www.google.com/#q="],                              // Google
-    ["!n",  "https://www.google.com/#q="],                              // Google
-    ["!o",  "https://www.google.com/#q="],                              // Google
-    ["!p",  "https://www.google.com/#q="],                              // Google
-    ["!q",  "https://www.google.com/#q="],                              // Google
-    ["!r",  "https://www.google.com/#q="],                              // Google
-    ["!s",  "https://www.google.com/#q="],                              // Google
-    ["!t",  "https://www.google.com/#q="],                              // Google
-    ["!u",  "http://www.urbandictionary.com/define.php?term="],                              // Google
-    ["!v",  "https://www.google.com/#q="],                              // Google
-    ["!w",  "http://en.wikipedia.org/w/index.php?search="],                              // Google
-    ["!x",  "https://www.google.com/#q="],                              // Google
-    ["!y",  "https://www.youtube.com/results?search_query="],                              // Google
-    ["!z",  "https://www.google.com/#q="],                              // Google
-    
+    ["!o",  "https://www.google.com/#q="],                               // Google
+    ["!i",  "https://www.google.com/search?tbm=isch&q="],                // Google Images`
+    ["!y",  "https://www.youtube.com/results?search_query="],            // YouTube
+    ["!w",  "http://en.wikipedia.org/w/index.php?search="],              // Wikipedia
+    ["!m",  "http://www.imdb.com/find?q="],                              // IMDb
+    ["!u",  "http://www.urbandictionary.com/define.php?term="],          // Urban Dictionary
+    ["!n",  "http://www.nyaa.se/?page=search&cats=0_0&filter=0&term="],  // Nyaa
+    ["!t",  "http://shop.tcgplayer.com/magic/product/show?ProductName="],// TCGplayer
+    ["!a",  "https://aur.archlinux.org/packages/?O=0&K="],               // AUR
 ];
-
 
 var ss="";
 function init() {
@@ -456,6 +437,7 @@ function init() {
     build();
 
     $('q').value="";
+    $('q').focus();
 }
 function handleQuery(e,q) { // Handle search query
     var key=e.keyCode || e.which;
